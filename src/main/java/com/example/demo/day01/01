@@ -1,0 +1,32 @@
+1) JDK1.7中关于AutoCloseable接口的使用
+https://www.tuicool.com/articles/63aqqy
+
+ 1public static void writeFile(String str) {
+ 2         FileWriter fw = null;
+ 3         try {
+ 4             fw = new FileWriter("E://test.txt", true);
+ 5             fw.write(str);
+ 6         } catch (IOException e) {
+ 7             e.printStackTrace();
+ 8         } finally {
+ 9             if (fw != null) {
+10                 try {
+11                     fw.close();
+12                 } catch (IOException e) {
+13                     e.printStackTrace();
+14                 }
+15             }
+16         }
+17     }
+
+
+1     public static void newWriteFile(String str) {
+2         try (FileWriter fw = new FileWriter("", true)) {
+3             fw.write(str);
+4         } catch (IOException e) {
+5             e.printStackTrace();
+6         }
+7     }
+
+
+
