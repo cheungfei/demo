@@ -1,4 +1,4 @@
-package com.example.demo.day01;
+package com.example.demo.day.day01;
 
 /**
  * @author zhangfei

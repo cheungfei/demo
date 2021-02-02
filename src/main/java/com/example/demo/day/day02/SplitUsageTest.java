@@ -1,6 +1,4 @@
-package com.example.demo.day02;
-
-import java.io.File;
+package com.example.demo.day.day02;
 
 /**
  * @author zhangfei
